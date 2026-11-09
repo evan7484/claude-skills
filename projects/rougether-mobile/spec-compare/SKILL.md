@@ -23,7 +23,7 @@ description: ../rougether-spec의 도메인 스펙과 이 앱의 실제 구현(�
    ```sh
    curl -s "$(python3 -c "import json;print(json.load(open('src/config/shared-endpoints.json'))['openApiSpec'])")"
    ```
-   (2026-08-17: 여기 옛 EC2 IP `3.35.167.122:8080`이 적혀 있었는데 HTTPS/CloudFront 전환 후 죽은 주소였다.
+   (2026-08-17: 여기 옛 EC2 IP 주소가 적혀 있었는데 HTTPS/CloudFront 전환 후 죽은 주소였다.
    그걸 찔러보고 **"서버 다운"이라 오판해** 타입을 손으로 쓰고 backend-blocked 재확인을 미뤘다.
    앱과 `gen:api-types`는 줄곧 CloudFront를 보고 정상 동작 중이었다.)
    경로 목록을 뽑아 `src/api/*.ts`의 `apiGet|apiPost|apiPut|apiDelete` 호출 경로와 대조(둘 다 정렬해 diff).

@@ -19,7 +19,11 @@ ln -s ~/Developer/personal/claude-skills/skills ~/.claude/skills
 
 ## 구성
 
-### 내 스킬 (`skills/`)
+### 범용 스킬 (`skills/`)
+
+아래 넷은 [Matt Pocock](https://github.com/mattpocock)의 [mattpocock/skills](https://github.com/mattpocock/skills)
+(MIT)에서 가져온 **2026년 7월 무렵 버전**이다. 각 폴더의 `LICENSE`가 원저작권 표기다. 이후 업스트림에서
+`writing-great-skills`는 `writing-for-agents`로 바뀌었고 `resolving-merge-conflicts`는 보관 처리됐다.
 
 | 스킬 | 용도 |
 | --- | --- |
@@ -50,7 +54,8 @@ ln -s ~/Developer/personal/claude-skills/skills ~/.claude/skills
 | `rougether-mobile` | `design-sync`(claude.ai/design 왕복) · `refactor-batch`(리팩토링 장부 한 묶음) · `spec-compare`(스펙·구현·스웨거 3자 비교) · `store-release`(dev→main 승격·스토어 발행) |
 | `rougether-server` | `plan` → `run-plan` → `sync-spec` → `walkthrough`(스펙 기반 구현 루프) · `commit` · `pr` · `add-swagger` · `routinevillage-asset-add`(Figma 에셋 생성) |
 
-원본이 바뀌면 다시 복사한다(git에 올라간 파일만 — `design-sync/out/` 같은 생성물 제외):
+원본이 바뀌면 다시 복사한다(git에 올라간 파일만 — `design-sync/out/` 같은 생성물 제외).
+복사하면 공개 사본에서 지운 값(`routinevillage-asset-add`의 Figma 파일 키)이 되살아나니 커밋 전에 다시 뺄 것:
 
 ```sh
 for r in rougether-mobile rougether-server; do

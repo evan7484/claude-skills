@@ -12,7 +12,7 @@ RoutineVillage의 기존 파스텔 손그림 스타일을 유지하면서 가구
 
 ## 기본 대상
 
-- Figma file key: `nVm6ty82NBCMEI9jxPiBXA`
+- Figma file key: 원본 레포(`rougether-server`)의 이 스킬 참조 — 공개 사본에서는 뺌
 - Page: `prototype`
 - Assets frame: `1:2`
 - Furniture group: `14:23` (`가구`)
