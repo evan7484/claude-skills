@@ -1,0 +1,9 @@
+# 외부 스킬 — third-party.sh로 설치(고정 커밋)
+skills/frontend-design/
+skills/ui-ux-pro-max/
+skills/design-taste-frontend/
+skills/impeccable/
+skills/hallmark/
+.DS_Store
+# Claude 앱이 자동 동기화하는 공식 스킬(일부 독점 라이선스) — 저장소에 싣지 않음
+skills/synced/
