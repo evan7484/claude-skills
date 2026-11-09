@@ -21,16 +21,17 @@ ln -s ~/Developer/personal/claude-skills/skills ~/.claude/skills
 
 ### 범용 스킬 (`skills/`)
 
-아래 넷은 [Matt Pocock](https://github.com/mattpocock)의 [mattpocock/skills](https://github.com/mattpocock/skills)
-(MIT)에서 가져온 **2026년 7월 무렵 버전**이다. 각 폴더의 `LICENSE`가 원저작권 표기다. 이후 업스트림에서
-`writing-great-skills`는 `writing-for-agents`로 바뀌었고 `resolving-merge-conflicts`는 보관 처리됐다.
+아래는 [Matt Pocock](https://github.com/mattpocock)의 [mattpocock/skills](https://github.com/mattpocock/skills)
+(MIT) 사본이다. 각 폴더의 `LICENSE`가 원저작권 표기다. 기준 커밋 `4ae2317`(2026-10-31) —
+갱신은 업스트림을 받아 `skills/<분류>/<이름>/`을 그대로 덮어쓴다.
 
-| 스킬 | 용도 |
-| --- | --- |
-| `diagnosing-bugs` | 어려운 버그·성능 회귀 진단 루프 |
-| `grill-me` | 계획·설계를 집요한 질문으로 다듬기 |
-| `resolving-merge-conflicts` | 진행 중인 merge/rebase 충돌 해결 |
-| `writing-great-skills` | 스킬 작성·편집 원칙 레퍼런스 |
+| 스킬 | 용도 | 비고 |
+| --- | --- | --- |
+| `diagnosing-bugs` | 어려운 버그·성능 회귀 진단 루프 | |
+| `grill-me` | 계획·설계를 집요한 질문으로 다듬기 | `/grill-me`로만 호출, 본체는 `grilling`에 위임 |
+| `grilling` | 질문을 결정 트리의 "라운드"로 묶어 추천 답과 함께 묻기 | `grill-me`의 본체 |
+| `writing-for-agents` | 스킬·AGENTS.md 작성 원칙 | 옛 `writing-great-skills`의 후속 |
+| `resolving-merge-conflicts` | 진행 중인 merge/rebase 충돌 해결 | 업스트림에서 2026-09-24 삭제 — 삭제 직전 판을 유지 |
 
 ### 외부 스킬 (`third-party.sh`로 설치, 저장소엔 안 실음)
 
