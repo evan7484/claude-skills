@@ -10,12 +10,32 @@
 ## 설치 (새 머신)
 
 ```sh
-git clone git@github.com:evan7484/claude-skills.git ~/Developer/personal/claude-skills
+git clone https://github.com/evan7484/claude-skills.git ~/Developer/personal/claude-skills
 ln -s ~/Developer/personal/claude-skills/skills ~/.claude/skills
-~/Developer/personal/claude-skills/third-party.sh   # 외부 스킬 5종
+~/Developer/personal/claude-skills/third-party.sh   # 외부 스킬 4종
+
+# 플러그인(공식 마켓플레이스 claude-plugins-official) — 업데이트는 플러그인이 알아서
+claude plugin install expo@claude-plugins-official --scope user
+claude plugin install superpowers@claude-plugins-official --scope user
+claude plugin install frontend-design@claude-plugins-official --scope user
+claude plugin install swift-lsp@claude-plugins-official --scope user
 ```
 
 `~/.claude/skills`가 이미 실제 폴더면 내용물을 `skills/`로 옮겨 커밋한 뒤 심링크로 교체.
+
+## 플러그인
+
+스킬 묶음이 플러그인으로 배포되면 사본을 여기 두지 않고 플러그인으로 깐다(같은 스킬이 두 번 뜨고, 사본은 낡는다).
+
+| 플러그인 | 스킬 | 용도 |
+| --- | --- | --- |
+| `expo` | 24 | Expo·EAS 빌드/배포·라우터·네이티브 UI·애니메이션·업그레이드 |
+| `superpowers` | 15 | brainstorming·TDD·계획 작성/실행·디버깅·코드 리뷰·워크트리 |
+| `frontend-design` | 1 | 템플릿 티 안 나는 프런트엔드 디자인 방향 |
+| `swift-lsp` | 0 | Swift 코드 분석(LSP)만 |
+
+`rougether-mobile`·`discpedia-mobile`은 커밋된 `.claude/settings.json`의 `enabledPlugins`로 `expo`를
+프로젝트에서도 켠다 — 팀원이 클론만 해도 켜지게 하려는 것이라 유저 설치와 겹쳐도 그대로 둔다.
 
 ## 구성
 
@@ -40,7 +60,6 @@ ln -s ~/Developer/personal/claude-skills/skills ~/.claude/skills
 
 | 설치 이름 | 출처 | 비고 |
 | --- | --- | --- |
-| `frontend-design` | anthropics/skills | 지시문만 |
 | `ui-ux-pro-max` | nextlevelbuilder/ui-ux-pro-max-skill | Python 검색 스크립트 + CSV 데이터 |
 | `design-taste-frontend` | Leonxlnx/taste-skill | 스킬 사용 중 Stop 훅으로 `gate.mjs` 실행(Node 22+·Chrome) |
 | `impeccable` | pbakaus/impeccable | 엔진 바이너리를 처음 실행 때 `~/.impeccable/bin/`에 받음(체크섬 검증). 편집 훅은 `npx impeccable install`로만 — 안 깔았음 |

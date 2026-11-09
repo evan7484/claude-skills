@@ -6,7 +6,6 @@ cd "$(dirname "$0")"
 
 # 설치 이름 | 저장소 | 커밋 | 저장소 안 스킬 경로
 SKILLS=(
-  "frontend-design|anthropics/skills|2c5958ecac7cee2b583967a2c4981d0f4a75c579|skills/frontend-design"
   "ui-ux-pro-max|nextlevelbuilder/ui-ux-pro-max-skill|4f2dbb67e64969a9a30ab00742f2d55d66ddec2b|.claude/skills/ui-ux-pro-max"
   "design-taste-frontend|Leonxlnx/taste-skill|f6b76575f949707b4e3c37cd86cb44b0b98643e8|skills/taste-skill"
   "impeccable|pbakaus/impeccable|613fbf88e0ef08709eaf238653285f430250c0ea|.claude/skills/impeccable"
